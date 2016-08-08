@@ -57,3 +57,7 @@ To launch the app open a terminal window, `cd` into the repository and type `gul
 * react-dom: 15.3.0
 * webpack: 1.13.1
 * webpack-stream: 3.2.0
+
+## License
+
+This project is licenced under the MIT licence, please read the licence file included in the repository for further informations.
