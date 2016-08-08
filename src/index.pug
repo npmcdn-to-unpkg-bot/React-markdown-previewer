@@ -1,0 +1,32 @@
+doctype html
+html
+  head
+    link(rel="stylesheet" href="style.css")
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css")
+  body
+    // Menu
+    .menubar
+      .hambclicker
+      #hambmenu
+        span
+        span
+        span
+        span
+      .title
+        img(src='http://coenraets.org/blog/wp-content/uploads/2014/12/react-logo.png')
+        h2 React Markdown Previewer
+    .menu
+      ul
+        li
+          i(class="fa fa-pencil-square-o " id="session" aria-hidden="true")
+          a(href="https://github.com/Lakston" target="_blank")   Author
+        li
+          i(class="fa fa-github " id="session" aria-hidden="true")
+          a(href="https://github.com/Lakston/React-markdown-previewer" target="_blank")   Github page
+        li
+          i(class="fa fa-twitter" id="session" aria-hidden="true")
+          a(href="https://twitter.com/Laks_is_coding" target="_blank")   Twitter
+    div#app
+    script(src='https://npmcdn.com/remarkable@1.6.2/dist/remarkable.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js')
+    script(src='main.min.js')

@@ -1,0 +1,156 @@
+body
+  font-family: sans-serif
+  margin: 0
+.container
+  width: 100%
+  margin: 15px auto
+  text-align : center
+.markup
+  display: flex
+  flex-direction: row
+  align-items: flex-start
+  flex-wrap: wrap
+  justify-content: center
+  margin: 0 auto
+  height: 400px
+textarea
+  resize: none
+  width: 80%
+  max-width: 350px
+  height: 100%
+  margin-top: 55px
+  padding: 20px
+  overflow: auto
+.processed
+  width: 80%
+  max-width: 350px
+  padding: 0 20px 0 50px
+  text-align: left
+  border-radius: 25px
+  background-color: white
+code
+  padding: 1px 3px 1px 3px
+  background-color: #F9F2F4
+  color: #C7244D
+
+
+//--------------------------
+// Menu Bar
+//--------------------------
+.menubar
+  position: relative
+  display: block
+  height: 60px
+  background-color: #222222
+  box-shadow: 2px 5px 5px 0 rgba(0,0,0,.12)
+  text-align: center
+  box-sizing: border-box
+  margin: 0
+.menubar h2
+  display: inline-block
+  color: white
+  vertical-align: middle
+  font-weight: 500
+  padding: 0px
+.title > img
+  display: inline-block
+  height: 40px
+  width: 40px
+  vertical-align: middle
+//--------------------------
+// Hamburger Menu
+//--------------------------
+#hambmenu
+  position: relative
+  display: block
+  width: 40px
+  height: 45px
+  float: left
+  transition: .5s ease-in-out
+  cursor: pointer
+  & span
+    position: absolute
+    height: 5px
+    width: 100%
+    vertical-align: middle
+    margin: 20px 0 0 15px
+    background: white
+    border-radius: 8px
+    opacity: 1
+    left: 0
+    transform: rotate(0deg)
+    transition: .25s ease-in-out
+    padding: 0px
+.hambclicker
+  content: ''
+  height: 48px
+  width: 55px
+  position: absolute
+  top: 8px
+  left: 8px
+  cursor: pointer
+  z-index: 99
+#hambmenu  span:nth-child(1)
+  top: 0px
+#hambmenu  span:nth-child(2),#hambmenu  span:nth-child(3)
+  top: 10px
+#hambmenu  span:nth-child(4)
+  top: 20px
+#hambmenu.open span:nth-child(1)
+  top: 18px
+  width: 0%
+  left: 50%
+#hambmenu.open span:nth-child(2)
+  transform: rotate(45deg)
+#hambmenu.open span:nth-child(3)
+  transform: rotate(-45deg)
+#hambmenu.open span:nth-child(4)
+  top: 18px
+  width: 0%
+  left: 50%
+
+//--------------------------
+// Slide In Menu
+//--------------------------
+.menu
+  position: absolute
+  z-index: 9
+  float: left
+  height: calc(100vh - 60px)
+  overflow-y: hidden
+  width: 210px
+  left: -100%
+  background-color: white
+  transition: all 400ms
+  border-right: 1px solid rgba(0,0,0,.14)
+  & ul
+    margin-top: 0px
+    padding: 0px
+    color: black
+    list-style-type: none
+    text-align: left
+  & li
+    padding: 30px 0 20px 20px
+    font-size: 1.5em
+    border-bottom: 1px solid rgba(0,0,0,.14)
+  & li:last-child
+    border-bottom: none
+.fa
+  color: black
+li a
+  text-decoration: none
+  color: black
+
+.menu.isopen
+  left: 0%
+
+// Media queries
+@media (max-width: 440px)
+  .menubar h2
+    font-size: 1em
+    line-height: 1em
+    padding-top: 10px
+  .title > img
+    height: 25px
+    width: 25px
+    padding-top: 5px
